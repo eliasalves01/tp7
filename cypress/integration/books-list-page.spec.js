@@ -1,6 +1,6 @@
 describe('Books List Page', () => {
     beforeEach(() => {
-      cy.visit('/books-list'); // Substitua pela rota real da sua aplicação
+      cy.visit('/books-list'); 
     });
   
     it('deve exibir a lista de livros', () => {
@@ -11,7 +11,6 @@ describe('Books List Page', () => {
     it('deve navegar para a página de detalhes ao clicar em um livro', () => {
       cy.get('.card-book').first().click();
       cy.url().should('include', '/book-details');
-      // Adicione mais verificações conforme necessário para a página de detalhes
     });
   
     it('deve mostrar um feedback adequado durante o carregamento dos dados', () => {
